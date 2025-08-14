@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="transições.css">
+</head>
+<body class="dark-mode">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-bar"></i>
+                Painel
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Início</a></li>
+                <li><a href="Relatorio.html" class="active"><i class="fas fa-chart-pie"></i>Relatórios</a></li>
+                <li><a href="transições.html"><i class="fas fa-users"></i>Transações</a></li>
+                <li><a href="perfil.html"><i class="fas fa-cogs"></i>Perfil</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-left">
+                <h2>Transações</h2>
+                <p>Histórico detalhado de todas as movimentações.</p>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle-button">
+                    <span class="icon-moon"><i class="fas fa-moon"></i></span>
+                    <span class="icon-sun"><i class="fas fa-sun"></i></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="transaction-grid">
+                <div class="transaction-table card">
+                    <div class="card-header">
+                        <h3>Transações Recentes</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID da Transação</th>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#20240814-001</td>
+                                <td>14/08/2024</td>
+                                <td>Pagamento de Serviço</td>
+                                <td class="value-credit">+$50.00</td>
+                                <td><span class="status-badge success">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td>#20240813-002</td>
+                                <td>13/08/2024</td>
+                                <td>Transferência Bancária</td>
+                                <td class="value-debit">-$150.75</td>
+                                <td><span class="status-badge pending">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td>#20240813-001</td>
+                                <td>13/08/2024</td>
+                                <td>Compra Online</td>
+                                <td class="value-debit">-$25.99</td>
+                                <td><span class="status-badge success">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td>#20240812-003</td>
+                                <td>12/08/2024</td>
+                                <td>Reembolso</td>
+                                <td class="value-credit">+$10.50</td>
+                                <td><span class="status-badge success">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td>#20240812-002</td>
+                                <td>12/08/2024</td>
+                                <td>Assinatura de Software</td>
+                                <td class="value-debit">-$9.99</td>
+                                <td><span class="status-badge error">Falha</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="filter-card card">
+                    <div class="card-header">
+                        <h3>Filtrar Transações</h3>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="date-range">Intervalo de Datas</label>
+                            <input type="text" id="date-range" placeholder="Ex: Últimos 30 dias">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="">Todos</option>
+                                <option value="success">Concluído</option>
+                                <option value="pending">Pendente</option>
+                                <option value="error">Falha</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Tipo</label>
+                            <select id="type">
+                                <option value="">Todos</option>
+                                <option value="credit">Crédito</option>
+                                <option value="debit">Débito</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="apply-filter-button">Aplicar Filtros</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>Dash</span>board</h1>
+                    <p>
+                        Uma plataforma moderna para gerenciar seus dados de forma eficiente.
+                    </p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Links Rápidos</h2>
+                    <ul>
+                        <a href="#"><li>Sobre Nós</li></a>
+                        <a href="#"><li>Serviços</li></a>
+                        <a href="#"><li>Privacidade</li></a>
+                        <a href="#"><li>Termos de Uso</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> &nbsp; +55 (11) 98765-4321</li>
+                        <li><i class="fas fa-envelope"></i> &nbsp; contato@dashboard.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> &nbsp; São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Dashboard. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

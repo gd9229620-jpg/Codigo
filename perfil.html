@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body class="dark-mode">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-bar"></i>
+                Painel
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Início</a></li>
+                <li><a href="Relatorio.html" class="active"><i class="fas fa-chart-pie"></i>Relatórios</a></li>
+                <li><a href="transições.html"><i class="fas fa-users"></i>Transações</a></li>
+                <li><a href="perfil.html"><i class="fas fa-cogs"></i>Perfil</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-left">
+                <h2>Perfil do Usuário</h2>
+                <p>Gerencie suas informações e configurações de conta.</p>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle-button">
+                    <span class="icon-moon"><i class="fas fa-moon"></i></span>
+                    <span class="icon-sun"><i class="fas fa-sun"></i></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="profile-layout">
+                <div class="profile-card card">
+                    <div class="profile-avatar">
+                        <img src="https://placehold.co/150x150/1abc9c/ffffff?text=U" alt="Avatar do Usuário">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Maria Silva</h3>
+                        <p class="profile-title">Gerente de Projeto Sênior</p>
+                        <p class="profile-bio">Especialista em metodologias ágeis e gestão de equipes multidisciplinares. Focada em resultados e inovação.</p>
+                        <div class="profile-contact">
+                            <p><i class="fas fa-envelope"></i> maria.silva@email.com</p>
+                            <p><i class="fas fa-phone"></i> +55 (11) 98765-4321</p>
+                            <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-details-grid">
+                    <div class="details-card card">
+                        <h4>Informações Pessoais</h4>
+                        <ul>
+                            <li><strong>Nome Completo:</strong> Maria de Souza Silva</li>
+                            <li><strong>Aniversário:</strong> 15 de Outubro</li>
+                            <li><strong>ID de Usuário:</strong> #USER-20240814</li>
+                        </ul>
+                        <button class="edit-button"><i class="fas fa-edit"></i> Editar Perfil</button>
+                    </div>
+
+                    <div class="details-card card">
+                        <h4>Configurações de Conta</h4>
+                        <ul>
+                            <li><strong>Notificações:</strong> Ativadas</li>
+                            <li><strong>Idioma:</strong> Português (Brasil)</li>
+                            <li><strong>Fuso Horário:</strong> GMT-3</li>
+                        </ul>
+                        <button class="edit-button"><i class="fas fa-cog"></i> Configurações</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>Dash</span>board</h1>
+                    <p>
+                        Uma plataforma moderna para gerenciar seus dados de forma eficiente.
+                    </p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Links Rápidos</h2>
+                    <ul>
+                        <a href="#"><li>Sobre Nós</li></a>
+                        <a href="#"><li>Serviços</li></a>
+                        <a href="#"><li>Privacidade</li></a>
+                        <a href="#"><li>Termos de Uso</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> &nbsp; +55 (11) 98765-4321</li>
+                        <li><i class="fas fa-envelope"></i> &nbsp; contato@dashboard.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> &nbsp; São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Dashboard. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

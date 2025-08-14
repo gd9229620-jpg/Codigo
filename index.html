@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <!-- Inclui o CDN do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Links para a fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Carrega os ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Inclui o CSS personalizado para as variáveis de cor e transições -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-lg p-6 md:h-screen md:sticky md:top-0 transition-colors duration-300">
+            <div class="flex items-center space-x-3 mb-10">
+                <i class="fas fa-rocket text-indigo-600 text-2xl"></i>
+                <h1 class="text-2xl font-bold">Painel</h1>
+            </div>
+            <nav>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg text-white bg-indigo-600 font-medium hover:bg-indigo-700 transition-colors">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a></li>
+                    <li><a href="Relatorio.html" class="flex items-center space-x-3 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Relatórios</span>
+                    </a></li>
+                    <li><a href="transições.html" class="flex items-center space-x-3 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-wallet"></i>
+                        <span>Transações</span>
+                    </a></li>
+                    <li><a href="perfil.html" class="flex items-center space-x-3 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Perfil</span>
+                    </a></li>
+                    <li><a href="#" class="flex items-center space-x-3 p-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6 md:p-10 flex flex-col">
+
+            <!-- Header -->
+            <header class="flex items-center justify-between mb-8 md:mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Olá, João!</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Bem-vindo de volta ao seu painel.</p>
+                </div>
+                <button id="theme-toggle" class="p-3 rounded-full text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">
+                    <i class="fas fa-sun dark:hidden"></i>
+                    <i class="fas fa-moon hidden dark:block"></i>
+                </button>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-1">
+
+                <!-- Metric Cards (top row) -->
+                <div class="col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Saldo Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-wallet text-indigo-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Saldo</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 dark:text-white">R$ 1.250,00</p>
+                    </div>
+                    <!-- Ganhos Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-chart-line text-indigo-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Ganhos</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 dark:text-white">R$ 8.500,00</p>
+                    </div>
+                    <!-- Nível Card -->
+                    <div class="bg-orange-100 dark:bg-orange-900 rounded-xl p-6 shadow-md border border-orange-300 dark:border-orange-700">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-award text-orange-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-orange-800 dark:text-orange-200">Nível</h3>
+                        </div>
+                        <p class="text-gray-700 dark:text-orange-100">Você está no nível <span class="font-bold text-orange-600">Bronze</span></p>
+                    </div>
+                </div>
+
+                <!-- Profile Card (right column) -->
+                <div class="col-span-1 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-user-circle text-indigo-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Meu Perfil</h3>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-gray-600 dark:text-gray-400"><strong>Nome:</strong> João da Silva</p>
+                            <p class="text-gray-600 dark:text-gray-400"><strong>Email:</strong> joao@email.com</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition-colors duration-200 flex items-center space-x-2 mt-4">
+                        <span>Editar Perfil</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Bottom Row Content -->
+                <div class="col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Atividades Recentes Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-history text-indigo-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Atividades Recentes</h3>
+                        </div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Venda concluída - R$ 500,00</li>
+                            <li>Depósito recebido - R$ 200,00</li>
+                            <li>Retirada - R$ 150,00</li>
+                        </ul>
+                    </div>
+                    <!-- Gráfico de Ganhos Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <i class="fas fa-chart-bar text-indigo-600 text-xl"></i>
+                            <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Gráfico de Ganhos</h3>
+                        </div>
+                        <canvas id="graficoGanhos"></canvas>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt-auto pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- About Section -->
+                    <div class="space-y-4">
+                        <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Logo</h1>
+                        <p class="text-gray-600 dark:text-gray-400">Conectando freelancers e clientes de forma simples e segura</p>
+                    </div>
+                    <!-- Links Section -->
+                    <div>
+                        <h2 class="text-lg font-semibold text-indigo-600 mb-4">QUEM SOMOS?</h2>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <li><a href="#" class="hover:underline">Sobre nós</a></li>
+                            <li><a href="#" class="hover:underline">Políticas de privacidade</a></li>
+                            <li><a href="#" class="hover:underline">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Section -->
+                    <div>
+                        <h2 class="text-lg font-semibold text-indigo-600 mb-4">CONTATO</h2>
+                        <div class="space-y-2 text-gray-600 dark:text-gray-400">
+                            <p>E-mail:</p>
+                            <p>Telefone:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-gray-500 dark:text-gray-400 mt-8 text-sm">
+                    &copy; 2025. Todos os direitos reservados
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

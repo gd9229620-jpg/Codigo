@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Dashboard</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="relatorio.css">
+</head>
+<body class="dark-mode">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-bar"></i>
+                Painel
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Início</a></li>
+                <li><a href="Relatorio.html" class="active"><i class="fas fa-chart-pie"></i>Relatórios</a></li>
+                <li><a href="transições.html"><i class="fas fa-users"></i>Transações</a></li>
+                <li><a href="perfil.html"><i class="fas fa-cogs"></i>Perfil</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i>Configurações</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-left">
+                <h2>Visão Geral do Dashboard</h2>
+                <p>Métricas e análises em tempo real.</p>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle-button">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <div class="metric-boxes">
+                <div class="metric-card card">
+                    <div class="card-header">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Receita Total</h3>
+                    </div>
+                    <span class="card-value">$12.500</span>
+                    <p class="card-detail">+5% desde o mês passado</p>
+                </div>
+                <div class="metric-card card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Novos Usuários</h3>
+                    </div>
+                    <span class="card-value">1.840</span>
+                    <p class="card-detail">+12% desde a semana passada</p>
+                </div>
+                <div class="metric-card card">
+                    <div class="card-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Vendas Diárias</h3>
+                    </div>
+                    <span class="card-value">250</span>
+                    <p class="card-detail">-2% desde ontem</p>
+                </div>
+            </div>
+
+            <div class="main-report-area">
+                <div class="card full-width-card">
+                    <div class="card-header">
+                        <h3>Tendência de Vendas</h3>
+                    </div>
+                    <p>Gráfico interativo mostrando as vendas ao longo do ano.</p>
+                    <a href="#" class="action-link">Ver Gráfico</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Análise de Produtos</h3>
+                    </div>
+                    <p>Ranking dos produtos mais vendidos e margens de lucro.</p>
+                    <a href="#" class="action-link">Ver Análise</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Relatório de Marketing</h3>
+                    </div>
+                    <p>ROI e performance das campanhas ativas.</p>
+                    <a href="#" class="action-link">Ver Relatório</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>Dash</span>board</h1>
+                    <p>
+                        Uma plataforma moderna para gerenciar seus dados de forma eficiente.
+                    </p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Links Rápidos</h2>
+                    <ul>
+                        <a href="#"><li>Sobre Nós</li></a>
+                        <a href="#"><li>Serviços</li></a>
+                        <a href="#"><li>Privacidade</li></a>
+                        <a href="#"><li>Termos de Uso</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> &nbsp; +55 (11) 98765-4321</li>
+                        <li><i class="fas fa-envelope"></i> &nbsp; contato@dashboard.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> &nbsp; São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Dashboard. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
