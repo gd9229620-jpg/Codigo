@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="configuração.css">
+</head>
+<body class="dark-mode">
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-chart-bar"></i>
+                Painel
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Início</a></li>
+                <li><a href="Relatorio.html" class="active"><i class="fas fa-chart-pie"></i>Relatórios</a></li>
+                <li><a href="transições.html"><i class="fas fa-users"></i>Transações</a></li>
+                <li><a href="perfil.html"><i class="fas fa-cogs"></i>Perfil</a></li>
+                <li><a href="configuração.html"><i class="fas fa-cogs"></i>Configurações</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="main-header">
+            <div class="header-left">
+                <h2>Configurações</h2>
+                <p>Personalize suas preferências e gerencie sua conta.</p>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle-button">
+                    <span class="icon-moon"><i class="fas fa-moon"></i></span>
+                    <span class="icon-sun"><i class="fas fa-sun"></i></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="settings-grid">
+
+                <div class="settings-card card">
+                    <h3>Configurações Gerais</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Nome de Usuário</label>
+                            <input type="text" id="username" value="Maria Silva">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" value="maria.silva@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Idioma</label>
+                            <select id="language">
+                                <option value="pt-br" selected>Português (Brasil)</option>
+                                <option value="en-us">Inglês (EUA)</option>
+                                <option value="es-es">Espanhol</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="save-button">Salvar Alterações</button>
+                    </form>
+                </div>
+
+                <div class="settings-card card">
+                    <h3>Segurança e Privacidade</h3>
+                    <div class="setting-item">
+                        <label>Autenticação de Dois Fatores</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="2fa-toggle">
+                            <label for="2fa-toggle" class="slider"></label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Visibilidade do Perfil</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="profile-visibility-toggle" checked>
+                            <label for="profile-visibility-toggle" class="slider"></label>
+                        </div>
+                    </div>
+                    <button class="change-password-button">Alterar Senha</button>
+                </div>
+
+                <div class="settings-card card">
+                    <h3>Notificações</h3>
+                    <div class="setting-item">
+                        <label>Receber notificações por e-mail</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="email-notifications-toggle" checked>
+                            <label for="email-notifications-toggle" class="slider"></label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Notificações de sistema</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="system-notifications-toggle" checked>
+                            <label for="system-notifications-toggle" class="slider"></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h1 class="logo-text"><span>Dash</span>board</h1>
+                    <p>
+                        Uma plataforma moderna para gerenciar seus dados de forma eficiente.
+                    </p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Links Rápidos</h2>
+                    <ul>
+                        <a href="#"><li>Sobre Nós</li></a>
+                        <a href="#"><li>Serviços</li></a>
+                        <a href="#"><li>Privacidade</li></a>
+                        <a href="#"><li>Termos de Uso</li></a>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> &nbsp; +55 (11) 98765-4321</li>
+                        <li><i class="fas fa-envelope"></i> &nbsp; contato@dashboard.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> &nbsp; São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Dashboard. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
